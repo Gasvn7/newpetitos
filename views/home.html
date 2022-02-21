@@ -12,6 +12,8 @@
     <script src="https://kit.fontawesome.com/c328687099.js" crossorigin="anonymous"></script>
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Link Swiper's CSS -->
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -52,40 +54,45 @@
     </header>
     <main class="products-home">
         <!-------------------------------SECCIONES POR MASCOSTAS------------------------------------>
-        <section class="selecion-por-mascota">
+        <section class="swiper mySwiper selecion-por-mascota">
             <h2 class="selecion-por-mascota-titulo">COMPRAR POR MASCOTA</h2>
-            <div class="selecionar-por-mascota">
+            <div class="swiper-wrapper selecionar-por-mascota">
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <a href=""><img src="/img/casa/perro.jpg"></a>
                     <span>PERROS</span>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <a href=""><img src="/img/casa/gatos.jpg"></a>
                     <span>GATOS</span>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <a href=""><img src="/img/casa/conejo.jpg"></a>
                     <span>ROEDORES</span>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <a href=""><img src="/img/casa/seccion-peces.jpg"></a>
                     <span>ACUARIO</span>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <a href=""> <img src="/img/casa/seccion-aves.jpg"></a>
                     <span>AVES</span>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <a href=""><img src="/img/casa/seccion-reptiles.jpg"></a>
                     <span>REPTILES</span>
                 </div>
             </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
         </section>
         <!--PRODUCTOS----------------->
         <section class="lo-destacado">
@@ -221,6 +228,26 @@
             </div>
         </div>
     </section>
+     <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesPerGroup: 3,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 </body>
 
 </html>
